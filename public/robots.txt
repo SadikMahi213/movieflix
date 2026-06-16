@@ -1,0 +1,6 @@
+# MovieFlix Demo - Robots.txt
+User-agent: *
+Allow: /
+Disallow: /admin/
+
+Sitemap: https://sadikmahi213.github.io/movieflix/sitemap.xml

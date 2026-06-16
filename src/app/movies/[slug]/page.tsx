@@ -1,10 +1,16 @@
 import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
-import { getMovieBySlug, getSimilarMovies } from '@/data/movies';
+import { getMovieBySlug, getSimilarMovies, movies } from '@/data/movies';
 import { MovieDetailClient } from './MovieDetailClient';
 
 interface Props {
   params: { slug: string };
+}
+
+export async function generateStaticParams() {
+  return movies.map((movie) => ({
+    slug: movie.slug,
+  }));
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
