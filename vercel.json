@@ -1,5 +1,6 @@
 {
   "version": 2,
+  "name": "movieflix-demo",
   "buildCommand": "next build",
   "outputDirectory": ".next",
   "installCommand": "npm install",
